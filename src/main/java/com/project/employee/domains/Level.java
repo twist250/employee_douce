@@ -18,4 +18,8 @@ public class Level {
 
     @OneToMany(mappedBy = "level",fetch = FetchType.LAZY)
     private Set<Room> rooms = new HashSet<>();
+
+    public Level(String level_name) {
+        this.level_name = level_name;
+    }
 }

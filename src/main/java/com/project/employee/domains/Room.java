@@ -21,4 +21,9 @@ public class Room {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "level_id")
     private Level level;
+
+    public Room(String room_no, Level level) {
+        this.room_no = room_no;
+        this.level = level;
+    }
 }
